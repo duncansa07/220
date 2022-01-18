@@ -1,7 +1,7 @@
 """
 Name: Scarlett Duncan
 lab1.py
-Problem: Calculating monthly interest rate from a users annual interest, statement balance, payment, and day of payment
+Problem: Calculating monthly interest rate from a users annual interest, statement balance, payment, and payment day
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
 """
