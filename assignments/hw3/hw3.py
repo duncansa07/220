@@ -27,6 +27,7 @@ def tip_jar():
         tip_add = tip_amt + tip_add
     print("total tips:", tip_add)
 
+
 def newton():
     sqr_root = eval(input("What number do you want to square root?"))
     approx = sqr_root
