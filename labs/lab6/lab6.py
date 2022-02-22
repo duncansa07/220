@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 lab6.py
 
-Problem: Create a program that will allow a user to enter a message and a keyword, then will encode it
+Problem: Create a program that will allow a user to enter a message and a keyword, then will encode it.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
