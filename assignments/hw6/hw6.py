@@ -1,42 +1,70 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Scarlett Duncan
+hw6.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Create a program that will use various functions and strings to produce an output.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
+
+from math import pi
 
 
 def cash_converter():
-    pass
+    integer = eval(input("enter an integer: "))
+    print("That is ${}.00".format(integer))
 
 
 def encode():
-    pass
+    message = input("enter a message: ")
+    key = eval(input("enter a key: "))
+    length = len(message)
+    for i in range(length):
+        new_numb = ord(message[i]) + key
+        new_letter = chr(new_numb)
+        print(new_letter, end="")
 
 
 def sphere_area(radius):
-    pass
+    area = 4 * pi * (radius * radius)
+    print("surface area: {}".format(area))
 
 
 def sphere_volume(radius):
-    pass
+    volume = (4/3) * pi * (radius * radius * radius)
+    print("volume: {}".format(volume))
 
 
 def sum_n(number):
-    pass
+    sum_num = 0
+    for i in range(number):
+        sum_num = sum_num + i+1
+    print("total: {}".format(sum_num))
 
 
 def sum_n_cubes(number):
-    pass
+    sum_numb = 0
+    for i in range(number):
+        cube = (i+1) * (i+1) * (i+1)
+        sum_numb = sum_numb + cube
+    print("total: {}".format(sum_numb))
 
 
 def encode_better():
-    pass
+    message = input("enter a message: ")
+    key = input("enter a key: ")
+    key = key.upper()
+    length_message = len(message)
+    length_key = len(key)
+
+    for i in range(length_message):
+        step_1 = ord(message[i]) - 65
+        step_2 = ord(key[i % length_key]) - 65
+        step_3 = step_1 + step_2
+        step_4 = (step_3 % 26) + 65
+        fin = chr(step_4)
+        print(fin, end="")
 
 
 if __name__ == '__main__':
