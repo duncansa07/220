@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 lab8.py
 
-Problem: Create a function that imports a file containing grades and calculates a students weighted average and class
+Problem: Create code that imports a file containing grades and calculates a students weighted average and class
 average, printing it to a new file.
 
 Certification of Authenticity:
