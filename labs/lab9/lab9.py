@@ -1,15 +1,21 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Scarlett Duncan
+lab9.py
+
+Problem: Write a code that creates a playable game of tic-tac-toe
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
 """
 
 
 def build_board():
-    pass
+    board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    return board
 
 
 def print_board(board):
-    """ prints the values of baord """
+    """ prints the values of board """
     RED = "\033[1;31m"
     BLUE = "\033[1;36m"
     LIGHT_GRAY = "\033[0;37m"
@@ -37,31 +43,98 @@ def print_board(board):
 
 
 def is_legal(board, position):
-    pass
+    if str(position).isnumeric():
+        return True
+    else:
+        return False
 
 
 def fill_spot(board, position, character):
-    pass
+    character = character.strip()
+    character = character.lower()
+    board[position - 1] = character
 
 
-def winning_game(board):
-    pass
+def game_is_won(board):
+    if (board[4] == board[2] == board[6]) or (board[4] == board[0] == board[8]):
+        return True
+    elif (board[0] == board[1] == board[2]) or (board[0] == board[3] == board[6]):
+        return True
+    elif (board[4] == board[3] == board[5]) or (board[4] == board[1] == board[7]):
+        return True
+    elif (board[8] == board[2] == board[5]) or (board[8] == board[6] == board[7]):
+        return True
+    else:
+        return False
 
 
 def game_over(board):
-    pass
+    if game_is_won(board):
+        return True
+    else:
+        num = True
+        acc_i = 0
+        if num or acc_i <= len(board):
+            for i in range(len(board)):
+                num = str(board[i]).isnumeric()
+                if num:
+                    return False
+        else:
+            return True
 
 
 def get_winner(board):
-    pass
+    if game_is_won(board):
+        if (board[4] == board[2] == board[6]) or (board[4] == board[0] == board[8]):
+            return board[4]
+        elif (board[0] == board[1] == board[2]) or (board[0] == board[3] == board[6]):
+            return board[0]
+        elif (board[4] == board[3] == board[5]) or (board[4] == board[1] == board[7]):
+            return board[4]
+        elif (board[8] == board[2] == board[5]) or (board[8] == board[6] == board[7]):
+            return board[8]
+        else:
+            return None
+    elif game_over():
+        return None
 
 
 def play(board):
-    pass
+    ans = "Yes"
+    shape_x = "x"
+    shape_o = "o"
+    while ans[0].lower() == 'y':
+        while not game_over(board):
+            print_board(board)
+            position_x = eval(input("X's, choose a position:"))
+            if is_legal(board, position_x):
+                fill_spot(board, position_x, shape_x)
+            else:
+                print("Choose a different position")
+
+            print_board(board)
+            if not game_over(board):
+                position_y = eval(input("O's, choose a position:"))
+                if is_legal(board, position_y):
+                    fill_spot(board, position_y, shape_o)
+                else:
+                    print("choose a different position")
+
+        if get_winner(board) == "x":
+            print("X's win!")
+        elif get_winner(board) == "o":
+            print("O's win!")
+        else:
+            print("Tie")
+        ans = input("Do you want to keep playing?")
+        board = build_board()
+
+
 
 
 def main():
-    pass
+    board = build_board()
+    play(board)
 
 
 if __name__ == '__main__':
