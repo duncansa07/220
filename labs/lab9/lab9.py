@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 lab9.py
 
-Problem: Write a code that creates a playable game of tic-tac-toe
+Problem: Write a code that creates a playable game of tic-tac-toe.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
