@@ -55,7 +55,7 @@ def won(guessed):
 
 
 def play_graphics(secret_word):
-    f
+
 
 
 def play_command_line(secret_word):
