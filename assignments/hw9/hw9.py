@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 hw9.py
 
-Problem:
+Problem: Write a code that creates a game of hangman
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
