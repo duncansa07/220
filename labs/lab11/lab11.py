@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 lab11.py
 
-Problem: write a program that creates a three door game using classes
+Problem: write a program that creates a three door game using classes.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
