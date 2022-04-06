@@ -57,18 +57,12 @@ def main():
     if door_numb == 1:
         door_1.set_secret(True)
         secret_door = door_1
-        not_secret_door_1 = door_2
-        not_secret_door_2 = door_3
     elif door_numb == 2:
         secret_door = door_2.set_secret(True)
         secret_door = door_2
-        not_secret_door_1 = door_1
-        not_secret_door_2 = door_3
     else:
         secret_door = door_3.set_secret(True)
         secret_door = door_3
-        not_secret_door_1 = door_1
-        not_secret_door_2 = door_2
 
     wins = 0
     losses = 0
@@ -114,108 +108,44 @@ def main():
                 words.draw(win)
         else:
             if door_1.is_clicked(user_click):
-                secret_door.color_door("green")
-                door_1.color_door("red")
-                words.undraw()
-                instructions.undraw()
-                loss_message = Text(Point(300, 150), "sorry, incorrect!")
-                new_instructions = Text(Point(300, 525), "click anywhere to play again")
-                loss_message.draw(win)
-                new_instructions.draw(win)
-                loss_number.undraw()
-                losses = losses + 1
-                loss_number = Text(lose_mid, "{}".format(losses))
-                loss_number.draw(win)
-                reset = win.getMouse()
-                if button.is_clicked(reset):
-                    game_end = True
-                    win.close()
-                else:
-                    door_numb = randint(1, 3)
-                    if door_numb == 1:
-                        door_1.set_secret(True)
-                        secret_door = door_1
-                    elif door_numb == 2:
-                        secret_door = door_2.set_secret(True)
-                        secret_door = door_2
-                    else:
-                        secret_door = door_3.set_secret(True)
-                        secret_door = door_3
-                    door_1.color_door("SaddleBrown")
-                    door_2.color_door("SaddleBrown")
-                    door_3.color_door("saddlebrown")
-                    new_instructions.undraw()
-                    loss_message.undraw()
-                    instructions.draw(win)
-                    words.draw(win)
+                not_secret_door = door_1
             elif door_2.is_clicked(user_click):
-                secret_door.color_door("green")
-                door_2.color_door("red")
-                words.undraw()
-                instructions.undraw()
-                loss_message = Text(Point(300, 150), "sorry, incorrect!")
-                new_instructions = Text(Point(300, 525), "click anywhere to play again")
-                loss_message.draw(win)
-                new_instructions.draw(win)
-                loss_number.undraw()
-                losses = losses + 1
-                loss_number = Text(lose_mid, "{}".format(losses))
-                loss_number.draw(win)
-                reset = win.getMouse()
-                if button.is_clicked(reset):
-                    game_end = True
-                    win.close()
+                not_secret_door = door_2
+            else:
+                not_secret_door = door_3
+
+            secret_door.color_door("green")
+            not_secret_door.color_door("red")
+            words.undraw()
+            instructions.undraw()
+            loss_message = Text(Point(300, 150), "sorry, incorrect!")
+            new_instructions = Text(Point(300, 525), "click anywhere to play again")
+            loss_message.draw(win)
+            new_instructions.draw(win)
+            loss_number.undraw()
+            losses = losses + 1
+            loss_number = Text(lose_mid, "{}".format(losses))
+            loss_number.draw(win)
+            reset = win.getMouse()
+            if button.is_clicked(reset):
+                game_end = True
+                win.close()
+            else:
+                door_numb = randint(1, 3)
+                if door_numb == 1:
+                    door_1.set_secret(True)
+                    secret_door = door_1
+                elif door_numb == 2:
+                    secret_door = door_2.set_secret(True)
+                    secret_door = door_2
                 else:
-                    door_numb = randint(1, 3)
-                    if door_numb == 1:
-                        door_1.set_secret(True)
-                        secret_door = door_1
-                    elif door_numb == 2:
-                        secret_door = door_2.set_secret(True)
-                        secret_door = door_2
-                    else:
-                        secret_door = door_3.set_secret(True)
-                        secret_door = door_3
-                    door_1.color_door("SaddleBrown")
-                    door_2.color_door("SaddleBrown")
-                    door_3.color_door("SaddleBrown")
-                    new_instructions.undraw()
-                    loss_message.undraw()
-                    words.draw(win)
-                    instructions.draw(win)
-            elif door_3.is_clicked(user_click):
-                secret_door.color_door("green")
-                door_3.color_door("red")
-                words.undraw()
-                instructions.undraw()
-                loss_message = Text(Point(300, 150), "sorry, incorrect!")
-                new_instructions = Text(Point(300, 525), "click anywhere to play again")
-                loss_message.draw(win)
-                new_instructions.draw(win)
-                loss_number.undraw()
-                losses = losses + 1
-                loss_number = Text(lose_mid, "{}".format(losses))
-                loss_number.draw(win)
-                reset = win.getMouse()
-                if button.is_clicked(reset):
-                    game_end = True
-                    win.close()
-                else:
-                    door_numb = randint(1, 3)
-                    if door_numb == 1:
-                        door_1.set_secret(True)
-                        secret_door = door_1
-                    elif door_numb == 2:
-                        secret_door = door_2.set_secret(True)
-                        secret_door = door_2
-                    else:
-                        secret_door = door_3.set_secret(True)
-                        secret_door = door_3
-                    door_1.color_door("SaddleBrown")
-                    door_2.color_door("SaddleBrown")
-                    door_3.color_door("SaddleBrown")
-                    new_instructions.undraw()
-                    loss_message.undraw()
-                    words.draw(win)
-                    instructions.draw(win)
+                    secret_door = door_3.set_secret(True)
+                    secret_door = door_3
+                door_1.color_door("SaddleBrown")
+                door_2.color_door("SaddleBrown")
+                door_3.color_door("SaddleBrown")
+                new_instructions.undraw()
+                loss_message.undraw()
+                instructions.draw(win)
+                words.draw(win)
         user_click = win.getMouse()
