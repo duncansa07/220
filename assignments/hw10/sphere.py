@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 sphere.py
 
-Problem: create a class that returns mathematical values of a sphere
+Problem: create a class that returns mathematical values of a sphere.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.

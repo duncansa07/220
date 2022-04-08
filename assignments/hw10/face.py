@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 face.py
 
-Problem: modify the class face to create 3 other face expressions
+Problem: modify the class face to create 3 other face expressions.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.

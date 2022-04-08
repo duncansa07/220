@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 hw10.py
 
-Problem: create a series of functions that practices using while loops, booleans, and classes
+Problem: create a series of functions that practices using while loops, booleans, and classes.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
