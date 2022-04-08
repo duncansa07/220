@@ -1,4 +1,13 @@
-from graphics import Circle, Line
+"""
+Name: Scarlett Duncan
+face.py
+
+Problem: modify the class face to create 3 other face expressions
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
+"""
+from graphics import Circle, Line, Point
 
 
 class Face:
@@ -24,10 +33,40 @@ class Face:
         self.mouth.draw(window)
 
     def smile(self):
-        pass
+        mouth_center = self.mouth.getCenter()
+        mouth_center_clone = mouth_center.clone()
+        mouth_center_clone.move(0, mouth_center/2)
+        mouth_p1 = self.mouth.getP1()
+        mouth_p2 = self.mouth.getP2()
+        smile_side_1 = Line(mouth_p1, mouth_center_clone)
+        smile_side_2 = Line(mouth_p2, mouth_center_clone)
+        smile_side_1.draw(self.window)
+        smile_side_2.draw(self.window)
 
     def shock(self):
-        pass
+        circle_center = self.mouth.getCenter()
+        mouth_shocked = self.left_eye.clone()
+        mouth_shocked.move(circle_center)
+        mouth_shocked.draw(self.window)
 
     def wink(self):
-        pass
+        mouth_center = self.mouth.getCenter()
+        mouth_center_clone = mouth_center.clone()
+        mouth_center_clone.move(0, mouth_center / 2)
+        mouth_p1 = self.mouth.getP1()
+        mouth_p2 = self.mouth.getP2()
+        smile_side_1 = Line(mouth_p1, mouth_center_clone)
+        smile_side_2 = Line(mouth_p2, mouth_center_clone)
+        smile_side_1.draw(self.window)
+        smile_side_2.draw(self.window)
+
+        eye_center = self.left_eye.getCenter()
+        eye_y = eye_center.getY()
+        eye_x = eye_center.getX()
+        eye_radius = self.left_eye.getRadius()
+        line_x1 = eye_x - eye_radius
+        line_x2 = eye_x + eye_radius
+        self.left_eye.undraw()
+        eye_line = Line(Point(line_x1, eye_y), Point(line_x2, eye_y))
+        eye_line.draw(self.window)
+
