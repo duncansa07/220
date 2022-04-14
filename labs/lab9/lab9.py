@@ -72,9 +72,9 @@ def game_over(board):
     if game_is_won(board):
         return True
     else:
-        num = True
+        num = False
         acc_i = 0
-        if num or acc_i <= len(board):
+        if not num or acc_i <= len(board):
             for i in range(len(board)):
                 num = str(board[i]).isnumeric()
                 if num:
