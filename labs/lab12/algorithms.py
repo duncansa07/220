@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 algorithms.py
 
-Problem: write a program that practices using while loops to read files
+Problem: write a program that practices using while loops to read files.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.

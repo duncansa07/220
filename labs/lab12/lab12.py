@@ -2,7 +2,7 @@
 Name: Scarlett Duncan
 lab12.py
 
-Problem: write a program that practices using list manipulation and while loops
+Problem: write a program that practices using list manipulation and while loops.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
