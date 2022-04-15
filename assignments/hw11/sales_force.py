@@ -1,6 +1,7 @@
 """
 
 """
+from sales_person import SalsePerson
 
 class SalesForce:
 
@@ -57,6 +58,12 @@ class SalesForce:
     def get_sales_frequencies(self):
         sales_frequency = {}
         for name in self.sales_people:
-            sales = name.get
+            sales = name.get.sales()
+            for sale in sales:
+                if sales_frequency.get(sale, None): == None:
+                    sales_frequency[sale] = 1
+                else:
+                    sales_frequency[sale] = sales_frequency[sale] + 1
+            return sales_frequency
 
 
